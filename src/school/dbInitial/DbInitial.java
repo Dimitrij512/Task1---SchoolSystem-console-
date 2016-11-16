@@ -14,7 +14,7 @@ import school.model.User;
 
 public class DbInitial {
 
-  private static final int ROLESTUDENT = 1;
+  private static final int STUDENT_ROLE = 1;
 
   public static void initialUser() {
 
@@ -24,7 +24,7 @@ public class DbInitial {
     student.setName("Student");
     student.setClas(1);
     student.setAdress("Franuk");
-    student.setRole(ROLESTUDENT);
+    student.setRole(STUDENT_ROLE);
     Db.users.add(student);
 
     Student student2 = new Student();
@@ -33,7 +33,7 @@ public class DbInitial {
     student2.setName("Student2");
     student2.setClas(1);
     student2.setAdress("Franuk");
-    student2.setRole(ROLESTUDENT);
+    student2.setRole(STUDENT_ROLE);
     Db.users.add(student2);
 
     Student student3 = new Student();
@@ -42,7 +42,7 @@ public class DbInitial {
     student3.setName("Student3");
     student3.setClas(5);
     student3.setAdress("Franuk");
-    student3.setRole(ROLESTUDENT);
+    student3.setRole(STUDENT_ROLE);
     Db.users.add(student3);
 
     Student student4 = new Student();
@@ -51,7 +51,7 @@ public class DbInitial {
     student4.setName("Student4");
     student4.setClas(5);
     student4.setAdress("Franuk");
-    student4.setRole(ROLESTUDENT);
+    student4.setRole(STUDENT_ROLE);
     Db.users.add(student4);
 
     Educator educator = new Educator();
@@ -163,7 +163,7 @@ public class DbInitial {
     for (int i = 0; i < Db.users.size(); i++) {
 
       User student = Db.users.get(i);
-      if (student.getRole() == ROLESTUDENT) {
+      if (student.getRole() == STUDENT_ROLE) {
         if (student.getClas() == clas) {
           students.add(student);
         }
