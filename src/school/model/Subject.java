@@ -3,29 +3,33 @@ package school.model;
 import java.util.List;
 
 public class Subject {
-  private String name;
-  private List<Integer> raiting;
+	private String name;
+	private List<Integer> raiting;
 
-  // constructor
-  public Subject(String name) {
-    this.name = name;
-  }
+	// constructor
 
-  // getters and setters
-  public String getName() {
-    return name;
-  }
+	public Subject() {
+	}
 
-  public void setName(String name) {
-    this.name = name;
-  }
+	public Subject(String name) {
+		this.name = name;
+	}
 
-  public List<Integer> getRaiting() {
-    return raiting;
-  }
+	// getters and setters
+	public String getName() {
+		return name;
+	}
 
-  public void setRaiting(int raiting) {
-    this.raiting.add(raiting);
-  }
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public List<Integer> getRaiting() {
+		return raiting;
+	}
+
+	public void setRaiting(int raiting) {
+		this.raiting.add(raiting);
+	}
 
 }
