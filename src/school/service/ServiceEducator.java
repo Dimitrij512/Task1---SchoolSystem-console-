@@ -25,4 +25,8 @@ public class ServiceEducator extends ServiceStudent {
       }
     }
   }
+
+  public void addRaiting() {
+
+  }
 }

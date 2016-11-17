@@ -59,7 +59,7 @@ public class Main {
           System.out.println("--------------------");
           System.out.println("Shoose service : ");
           System.out.println("Show your schedule press : 1 ");
-          System.out.println("Show work days and audiance : 2 ");
+          System.out.println("Show list subject on week : 2 ");
           System.out.println("--------------------");
           int parametr = Integer.parseInt(se.enterNumber());
           if (parametr == 1) {
