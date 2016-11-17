@@ -206,39 +206,4 @@ public class ServiceDirector extends ServiceStudent {
     }
   }
 
-  public void showAllSchedule() {
-    int countDay;
-    int day = 1;
-    for (int i = 0; i < Db.clases.size(); i++) {
-      int numbOfClass = Db.clases.get(i).getNumb();
-      System.out.println("-|--|---|--|--|---|-----|---|----|---");
-      System.out.println("class : " + numbOfClass);
-      for (int j = 0; j < Db.schedule.size(); j++) {
-        countDay = j;
-        for (int j2 = 0; j2 < Db.schedule.get(j).size(); j2++) {
-
-          LessonForSchedule lessonForSchedule = Db.schedule.get(j).get(j2);
-          int clasLesson = lessonForSchedule.getClas();
-          int countLesson = lessonForSchedule.getNumbLesson();
-          int numbAudience = lessonForSchedule.getAudience();
-          String name = lessonForSchedule.getNameLesson();
-          if (numbOfClass == clasLesson) {
-            if (countDay == j) {
-
-              System.out.println("--------------");
-              System.out.println(day + " day : ");
-              System.out.println("--------------");
-              day++;
-              if (day > 5) {
-                day = 1;
-              }
-            }
-
-            System.out.println("N: " + countLesson + " " + numbAudience + " " + name);
-            countDay++;
-          }
-        }
-      }
-    }
-  }
 }

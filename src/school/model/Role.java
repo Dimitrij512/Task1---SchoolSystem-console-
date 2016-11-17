@@ -1,26 +1,20 @@
 package school.model;
 
 public class Role {
-	private int student;
-	private int educator;
-	private int director;
-	public int getStudent() {
-		return student;
-	}
-	public void setStudent(int student) {
-		this.student = student;
-	}
-	public int getEducator() {
-		return educator;
-	}
-	public void setEducator(int educator) {
-		this.educator = educator;
-	}
-	public int getDirector() {
-		return director;
-	}
-	public void setDirector(int director) {
-		this.director = director;
-	}
+  private int student = 1;
+  private int educator = 2;
+  private int director = 3;
+
+  public int getStudent() {
+    return student;
+  }
+
+  public int getEducator() {
+    return educator;
+  }
+
+  public int getDirector() {
+    return director;
+  }
 
 }

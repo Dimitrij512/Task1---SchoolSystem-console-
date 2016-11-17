@@ -2,12 +2,13 @@ package school.model;
 
 public class User {
   private int role;
+  private int clas;
   private String name;
   private String surname;
   private String adress;
+  private String lesson;
   private String login;
   private String password;
-  private int clas;
 
   public int getRole() {
     return role;
@@ -63,6 +64,14 @@ public class User {
 
   public void setClas(int clas) {
     this.clas = clas;
+  }
+
+  public String getLesson() {
+    return lesson;
+  }
+
+  public void setLesson(String lesson) {
+    this.lesson = lesson;
   }
 
 }

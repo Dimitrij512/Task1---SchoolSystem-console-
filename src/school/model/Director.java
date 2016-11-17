@@ -1,5 +1,5 @@
 package school.model;
 
-public class Director extends Educator {
+public class Director extends User {
 
 }
