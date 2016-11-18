@@ -1,17 +1,17 @@
 package school.model;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Student extends User {
   private int clas;
-  private ArrayList<Subject> lessons;
+  private List<Subject> lessons;
   private double avarageRang;
 
-  public ArrayList<Subject> getLessons() {
+  public List<Subject> getLessons() {
     return lessons;
   }
 
-  public void setLessons(ArrayList<Subject> lessons) {
+  public void setLessons(List<Subject> lessons) {
     this.lessons = lessons;
   }
 

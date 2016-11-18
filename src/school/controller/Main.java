@@ -61,6 +61,7 @@ public class Main {
           System.out.println("Show your schedule press : 1 ");
           System.out.println("Show list subject on week : 2 ");
           System.out.println("Show list students in clas : 3");
+          System.out.println("add raiting for student : 4");
           System.out.println("--------------------");
           int parametr = Integer.parseInt(se.enterNumber());
           if (parametr == 1) {
@@ -69,6 +70,8 @@ public class Main {
             se.showSubjectOnWeek();
           } else if (parametr == 3) {
             se.showStudentsInClass();
+          } else if (parametr == 4) {
+            se.addRaitingForStudent();
           }
           System.out.println("If you want yet press : 1");
           System.out.println("If you log aut press press : other key  ");
@@ -89,12 +92,15 @@ public class Main {
           System.out.println("Shoose service : ");
           System.out.println("create shedule press : 2");
           System.out.println("show shedule press : 1");
+          System.out.println("add raiting for student : 3");
           System.out.println("--------------------");
           parametr = Integer.parseInt(sd.enterNumber());
           if (parametr == 2) {
             sd.shooseSubjectForCreateShedule();
           } else if (parametr == 1) {
             sd.showAllSchedule();
+          } else if (parametr == 3) {
+            sd.addRaitingForStudent();
           }
           System.out.println("If you want yet press : 1");
           System.out.println("If you log aut press press : other key  ");

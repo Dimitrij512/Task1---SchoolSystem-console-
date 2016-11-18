@@ -24,6 +24,7 @@ public class DbInitial {
     student.setSurname("Petrenko");
     student.setClas(1);
     student.setAdress("Franuk");
+    student.setLessons(Db.subjects);
     student.setRole(STUDENT_ROLE);
     Db.student.add(student);
 
@@ -34,6 +35,7 @@ public class DbInitial {
     student2.setSurname("Pupkin");
     student2.setClas(1);
     student2.setAdress("Franuk");
+    student2.setLessons(Db.subjects);
     student2.setRole(STUDENT_ROLE);
     Db.student.add(student2);
 
@@ -44,6 +46,7 @@ public class DbInitial {
     student3.setSurname("Firman");
     student3.setClas(5);
     student3.setAdress("Franuk");
+    student3.setLessons(Db.subjects);
     student3.setRole(STUDENT_ROLE);
     Db.student.add(student3);
 
@@ -54,6 +57,7 @@ public class DbInitial {
     student4.setSurname("Barabash");
     student4.setClas(5);
     student4.setAdress("Franuk");
+    student4.setLessons(Db.subjects);
     student4.setRole(STUDENT_ROLE);
     Db.student.add(student4);
 

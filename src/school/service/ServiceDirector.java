@@ -9,7 +9,7 @@ import school.db.Db;
 import school.model.LessonForSchedule;
 import school.model.Subject;
 
-public class ServiceDirector extends ServiceStudent {
+public class ServiceDirector extends ServiceEducator {
 
   private Random random = new Random();
   private final int MONDAY = 0;
