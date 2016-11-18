@@ -2,11 +2,9 @@ package school.model;
 
 public class User {
   private int role;
-  private int clas;
   private String name;
   private String surname;
   private String adress;
-  private String lesson;
   private String login;
   private String password;
 
@@ -56,22 +54,6 @@ public class User {
 
   public void setPassword(String password) {
     this.password = password;
-  }
-
-  public int getClas() {
-    return clas;
-  }
-
-  public void setClas(int clas) {
-    this.clas = clas;
-  }
-
-  public String getLesson() {
-    return lesson;
-  }
-
-  public void setLesson(String lesson) {
-    this.lesson = lesson;
   }
 
 }

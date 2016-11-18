@@ -10,7 +10,6 @@ import school.model.Director;
 import school.model.Educator;
 import school.model.Student;
 import school.model.Subject;
-import school.model.User;
 
 public class DbInitial {
 
@@ -21,54 +20,60 @@ public class DbInitial {
     Student student = new Student();
     student.setLogin("student");
     student.setPassword("password");
-    student.setName("Anjey student");
+    student.setName("Anjey");
+    student.setSurname("Petrenko");
     student.setClas(1);
     student.setAdress("Franuk");
     student.setRole(STUDENT_ROLE);
-    Db.users.add(student);
+    Db.student.add(student);
 
     Student student2 = new Student();
     student2.setLogin("student2");
     student2.setPassword("password");
-    student2.setName("Roman student");
+    student2.setName("Roman");
+    student2.setSurname("Pupkin");
     student2.setClas(1);
     student2.setAdress("Franuk");
     student2.setRole(STUDENT_ROLE);
-    Db.users.add(student2);
+    Db.student.add(student2);
 
     Student student3 = new Student();
     student3.setLogin("student3");
     student3.setPassword("password");
-    student3.setName("Ivan student");
+    student3.setName("Ivan");
+    student3.setSurname("Firman");
     student3.setClas(5);
     student3.setAdress("Franuk");
     student3.setRole(STUDENT_ROLE);
-    Db.users.add(student3);
+    Db.student.add(student3);
 
     Student student4 = new Student();
     student4.setLogin("student4");
     student4.setPassword("password");
-    student4.setName("Vaska student");
+    student4.setName("Vaska");
+    student4.setSurname("Barabash");
     student4.setClas(5);
     student4.setAdress("Franuk");
     student4.setRole(STUDENT_ROLE);
-    Db.users.add(student4);
+    Db.student.add(student4);
 
     Educator educator = new Educator();
+    Subject subject = new Subject("math");
+
     educator.setLogin("educator");
     educator.setPassword("password");
     educator.setName("Pavlo Illich educator");
     educator.setRole(2);
-    educator.setLesson("math");
+    educator.setSubject(subject);
     educator.setAdress("adress");
-    Db.users.add(educator);
+    Db.educator.add(educator);
 
     Director director = new Director();
     director.setName("Dima director");
     director.setLogin("director");
     director.setPassword("password");
     director.setRole(3);
-    Db.users.add(director);
+    Db.director.add(director);
 
   }
 
@@ -160,15 +165,13 @@ public class DbInitial {
     Db.clases.add(clas5);
   }
 
-  public List<User> addStudentsForClas(int clas) {
-    List<User> students = new ArrayList<User>();
-    for (int i = 0; i < Db.users.size(); i++) {
+  public List<Student> addStudentsForClas(int clas) {
+    List<Student> students = new ArrayList<Student>();
+    for (int i = 0; i < Db.student.size(); i++) {
 
-      User student = Db.users.get(i);
-      if (student.getRole() == STUDENT_ROLE) {
-        if (student.getClas() == clas) {
-          students.add(student);
-        }
+      Student student = Db.student.get(i);
+      if (student.getClas() == clas) {
+        students.add(student);
       }
     }
 

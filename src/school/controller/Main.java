@@ -26,7 +26,7 @@ public class Main {
       int role = st.autentification();
 
       if (role == STUDENT_ROLE) {
-        String nameUser = Db.currentSession.getUser().getName();
+        String nameUser = Db.currentSession.getStudent().getName();
         System.out.println("--------------------");
         System.out.println("Hello " + nameUser);
         System.out.println("hello in our programm!!!!");
@@ -50,7 +50,7 @@ public class Main {
 
       }
       if (role == EDUCATOR_ROLE) {
-        String nameEducator = Db.currentSession.getUser().getName();
+        String nameEducator = Db.currentSession.getEducator().getName();
         System.out.println("--------------------");
         System.out.println("Hello " + nameEducator);
         System.out.println("--------------------");
@@ -60,12 +60,15 @@ public class Main {
           System.out.println("Shoose service : ");
           System.out.println("Show your schedule press : 1 ");
           System.out.println("Show list subject on week : 2 ");
+          System.out.println("Show list students in clas : 3");
           System.out.println("--------------------");
           int parametr = Integer.parseInt(se.enterNumber());
           if (parametr == 1) {
             se.showAllSchedule();
           } else if (parametr == 2) {
             se.showSubjectOnWeek();
+          } else if (parametr == 3) {
+            se.showStudentsInClass();
           }
           System.out.println("If you want yet press : 1");
           System.out.println("If you log aut press press : other key  ");
@@ -76,7 +79,7 @@ public class Main {
         }
       }
       if (role == DIRECTOR_ROLE) {
-        String nameDirector = Db.currentSession.getUser().getName();
+        String nameDirector = Db.currentSession.getDirector().getName();
         System.out.println("HELLO " + nameDirector);
         boolean start = true;
         int parametr;

@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Clas {
   private int numb;
-  private List<User> students;
+  private List<Student> students;
 
   public int getNumb() {
     return numb;
@@ -14,11 +14,11 @@ public class Clas {
     this.numb = numb;
   }
 
-  public List<User> getStudents() {
+  public List<Student> getStudents() {
     return students;
   }
 
-  public void setStudents(List<User> students) {
+  public void setStudents(List<Student> students) {
     this.students = students;
   }
 

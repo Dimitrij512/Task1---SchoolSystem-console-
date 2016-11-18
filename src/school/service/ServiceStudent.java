@@ -25,16 +25,46 @@ public class ServiceStudent {
   public int existUser(String login, String password) {
     Session session = new Session();
     int result = 0;
-    for (int i = 0; i < Db.users.size(); i++) {
-      String loginUser = Db.users.get(i).getLogin();
-      String passwordUser = Db.users.get(i).getPassword();
-      int role = Db.users.get(i).getRole();
+    // for student
+    for (int i = 0; i < Db.student.size(); i++) {
+      String loginUser = Db.student.get(i).getLogin();
+      String passwordUser = Db.student.get(i).getPassword();
+      int role = Db.student.get(i).getRole();
 
       if (loginUser.equals(login) && passwordUser.equals(password)) {
-        session.setUser(Db.users.get(i));
+        session.setStudent(Db.student.get(i));
         Db.currentSession = session;
         result = role;
-        break;
+        return result;
+      }
+    }
+    // for educator
+    System.out.println("Educator : ");
+    for (int i = 0; i < Db.educator.size(); i++) {
+      String loginUser = Db.educator.get(i).getLogin();
+      String passwordUser = Db.educator.get(i).getPassword();
+      int role = Db.educator.get(i).getRole();
+
+      if (loginUser.equals(login) && passwordUser.equals(password)) {
+        session.setEducator(Db.educator.get(i));
+        Db.currentSession = session;
+        result = role;
+        return result;
+      }
+    }
+
+    System.out.println("Director :");
+    // for director
+    for (int i = 0; i < Db.director.size(); i++) {
+      String loginUser = Db.director.get(i).getLogin();
+      String passwordUser = Db.director.get(i).getPassword();
+      int role = Db.director.get(i).getRole();
+
+      if (loginUser.equals(login) && passwordUser.equals(password)) {
+        session.setDirector(Db.director.get(i));
+        Db.currentSession = session;
+        result = role;
+        return result;
       }
     }
     return result;
@@ -70,8 +100,7 @@ public class ServiceStudent {
     int day = 1;
     int week = 5;
 
-    if (Db.currentSession.getUser().getRole() == DIRECTOR_ROLE
-        || Db.currentSession.getUser().getRole() == EDUCATOR_ROLE) {
+    if (Db.currentSession.getDirector() != null || Db.currentSession.getEducator() != null) {
       for (int i = 0; i < Db.clases.size(); i++) {
         int numbOfClass = Db.clases.get(i).getNumb();
         System.out.println("-|--|---|--|--|---|-----|---|----|---");
@@ -79,7 +108,7 @@ public class ServiceStudent {
         printLessonForShudule(numbOfClass, countDay, day, week);
       }
     } else {
-      int numbOfClass = Db.currentSession.getUser().getClas();
+      int numbOfClass = Db.currentSession.getStudent().getClas();
       System.out.println("-|--|---|--|--|---|-----|---|----|---");
       System.out.println("class : " + numbOfClass);
       printLessonForShudule(numbOfClass, countDay, day, week);

@@ -3,7 +3,7 @@ package school.model;
 import java.util.ArrayList;
 
 public class Student extends User {
-
+  private int clas;
   private ArrayList<Subject> lessons;
   private double avarageRang;
 
@@ -21,6 +21,14 @@ public class Student extends User {
 
   public void setAvarageRang(double avarageRang) {
     this.avarageRang = avarageRang;
+  }
+
+  public int getClas() {
+    return clas;
+  }
+
+  public void setClas(int clas) {
+    this.clas = clas;
   }
 
 }
